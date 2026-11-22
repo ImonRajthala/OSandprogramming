@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int global_init = 42;          /* Data segment  (initialized global)   */
-int global_uninit;             /* BSS segment   (uninitialized global) */
-static int local_static = 20;  /* Data segment  (initialized static)   */
+int global_init = 42;         
+int global_uninit;             
+static int local_static = 20; 
 
 int main() {
-    int local_var = 10;                         /* Stack segment */
-    int *heap_var = (int *)malloc(sizeof(int)); /* Heap segment  */
+    int local_var = 10;                         
+    int *heap_var = (int *)malloc(sizeof(int)); 
     *heap_var = 500;
 
     printf(".......Variable Addresses.......\n\n");
